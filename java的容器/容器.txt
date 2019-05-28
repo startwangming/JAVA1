@@ -1,0 +1,14 @@
+三个数组：
+arrayList  查询速度快  	放在了同一区域
+linkList 	增删改的速度较快	左右进行连接，房子按了不同的地方
+Vector	线程安全		加入了sysnc****的关键字
+
+
+map{字典}
+HashMap  link+arraylit 的结合
+HashTable synchronized  效率低，但是比较的安全，超过0.75的时候会扩容
+TreeMap	 自动的排序，使用用了comparable的接口，来进行排序
+
+set 不可重复的数组
+HashSet	底层是调用HashMap的对象实现的，且通过key值来进行存储，所以不可重复
+TreeSet    底层调用了TreeMap的方法来进行实现，且通过key值来进行存储数据，有自动的排序功能
