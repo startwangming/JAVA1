@@ -4,9 +4,9 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /***
- * ²âÊÔThreeSetµÄ·½·¨ºÍÅÅĞò
- * ComparableµÄÊ¹ÓÃ
- * @author ÍõÃ÷ĞÇ
+ * æµ‹è¯•ThreeSetçš„æ–¹æ³•å’Œæ’åº
+ * Comparableçš„ä½¿ç”¨
+ * @author starwang
  *
  */
 public class myThreeSet {
