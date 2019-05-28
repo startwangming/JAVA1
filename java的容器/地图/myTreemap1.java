@@ -4,12 +4,12 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /***
- *HashMapµÄÊ¹ÓÃºÍµ×²ãÔ­Àí
- *CompareableµÄÊ¹ÓÃ£¨½Ó¿Ú£©
- *Ò»°ãÇé¿öÏÂThreeMapµÄÊ¹ÓÃÊÇÔÚĞèÒªÅÅĞòµÄÊ±ºò²Å»áÊ¹ÓÃ£¬²¢ÇÒThreeMapÊÇĞ§ÂÊ±È½ÏµÍµÄ
+ *HashMapçš„ä½¿ç”¨å’Œåº•å±‚åŸç†
+ *Compareableçš„ä½¿ç”¨ï¼ˆæ¥å£ï¼‰
+ *ä¸€èˆ¬æƒ…å†µä¸‹ThreeMapçš„ä½¿ç”¨æ˜¯åœ¨éœ€è¦æ’åºçš„æ—¶å€™æ‰ä¼šä½¿ç”¨ï¼Œå¹¶ä¸”ThreeMapæ˜¯æ•ˆç‡æ¯”è¾ƒä½çš„
  *
  *
- * @author ÍõÃ÷ĞÇ
+ * @author starwang
  *
  */
 public class myTreemap1 {
@@ -20,11 +20,11 @@ public class myTreemap1 {
 		aa.put(15, "asfsaf");
 		aa.put(13, "asfsaf");
 		aa.put(12, "asfsaf");
-		System.out.println(aa);//Ìí¼ÓµÄÊ±ºòÊÇ×Ô¶¯ÅÅĞòµÄ
-		Emp aaa1 = new Emp(1, "Íõ", 21); 
-		Emp aaa2 = new Emp(2, "Àî", 24); 
-		Emp aaa3 = new Emp(3, "ÕÅ", 23); 
-		Emp aaa4 = new Emp(4, "ËÎ", 24); 
+		System.out.println(aa);//æ·»åŠ çš„æ—¶å€™æ˜¯è‡ªåŠ¨æ’åºçš„
+		Emp aaa1 = new Emp(1, "ç‹", 21); 
+		Emp aaa2 = new Emp(2, "æ", 24); 
+		Emp aaa3 = new Emp(3, "å¼ ", 23); 
+		Emp aaa4 = new Emp(4, "å®‹", 24); 
 		Map<Emp, String> aa2 = new TreeMap<Emp, String>();
 		
 	}
