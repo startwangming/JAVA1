@@ -7,22 +7,22 @@ import java.util.Map;
 
 
 /***
-  * ����+�����Ľṹ
-  * ���飺��ѯ�ٶȿ�  ռ�ÿռ�����
-  * ������ɾ�����޸Ľ�Ϊ����  ռ�ÿռ䲻����  �����������ֻ�Ǵ���next��ֵ��������
- *Hash�㷨���ǽ�Hash����ȵķ�Χ16����֮�䣬ʹ���ǵ�ɢ�зֲ����Ӿ���
- *Hashֵ�Ǿ���hash�㷨�ĵ���ֵ�����Ծ����洢��λ��
+  * 数组+链表的结构
+  * 数组：查询速度快  占用空间连续
+  * 链表：删除和修改较为快速  占用空间不连续  但是这个链表只是带有next的值，的链表
+ *Hash算法，是将Hash码均匀的氛围16个数之间，使他们的散列分布更加均匀
+ *Hash值是经过hash算法的到的值，可以决定存储的位置
  *
  *
- *HashTable:	�̲߳���ȫ������Ч�ʸ�  ����key  value Ϊnull
- *HashMap:		�̰߳�ȫ������Ч�ʲ��ߣ�������synchronized�ؼ��֣�	 ������key value Ϊnull
+ *HashTable:	线程不安全，但是效率高  允许key  value 为null
+ *HashMap:		线程安全，但是效率不高（添加了synchronized关键字）	 不允许key value 为null
  *
  *
- *HashMap���ɵ�ʱ�򣬾ͻ����HashCode�룬Ȼ�󽫹�ϣ�����ɢ�е��㷨�����Եĵõ�һ��Hashֵ������֮�󣬾ͻ�ȷ�����put�Ĵ洢λ�ã��������ͬ��Hashֵ�û����ͻᣬ�����Ƿ����˶�Ӧ�Ĵ���ֵ��next�ĺ��棬�������γ���һ��С�͵�������������������ǳ���һ��������ʱ��ͻ�����ߵĺ���������JDK8�Ժ����ǳ���8�ͺ������ת��Ϊ��ڶ����������д洢�����ļӿ��˴洢��Ч��
- *HashMap�ں�HashTable�ڽ�����ʱ�򣬶���ͨ����λͰ���顱�����н�����,��Լ������2�ı�����һ��Ϊ16�����飬���Ե�����ȥ��ȡ���hashcode��key��ʱ��ʵ�ֻ�ȡ����hashcode�����м��㣬Ȼ���ҵ����ǲ���equal�ķ����ҵ��Ǹ�Ԫ�أ�����true��
- *java�涨���������ͬ�Ļ�������HashCode�ͻ���ͬ
- *���ݵ����⣬����������0.75��ʱ�򣬾ͻ���д����½���copy
- *@author ������
+ *HashMap生成的时候，就会产生HashCode码，然后将哈希码进行散列的算法，可以的得到一个Hash值，这样之后，就会确定这个put的存储位置，如果有相同的Hash值得话，就会，将他们放在了对应的存在值得next的后面，这样就形成了一个小型的链表，但是如果当他们超过一定数量的时候就会产生边的很慢，所以JDK8以后将他们超过8和后的链表转化为红黑二叉树，进行存储，大大的加快了存储的效率
+ *HashMap在和HashTable在建立的时候，都是通过“位桶数组”来进行建立的,大约建立了2的倍数，一般为16个数组，所以当我们去获取这个hashcode的key的时候，实现获取他的hashcode来进行计算，然后找到他们并且equal的方法找到那个元素，返回true，
+ *java规定如果两个相同的话，他的HashCode就会相同
+ *扩容的问题，当他超过了0.75的时候，就会进行从新新建和copy
+ *@author satrwang
  *
  */
 public class myHashMap2 {
@@ -34,14 +34,14 @@ public class myHashMap2 {
 		Map<Integer, String> ss = new Hashtable<Integer, String>();
 		
 		/***
-		 * ���ĵĴ�����������Nodeһ��
+		 * 核心的代码就如下面的Node一样
 		 */
 		
 	}
 
 }
 /***
- * ���ĵĴ�����������Nodeһ��
+ * 核心的代码就如下面的Node一样
  */
 //static class Node<K,V> implements Map.Entry<K,V> {
 //    final int hash;
