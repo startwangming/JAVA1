@@ -1,7 +1,7 @@
 package test9;
 /***
- * ×Ô¶¨ÒåÒ»¸öHashMapµÄÊµÏÖ·½Ê½
- * @author ÍõÃ÷ĞÇ
+ * è‡ªå®šä¹‰ä¸€ä¸ªHashMapçš„å®ç°æ–¹å¼
+ * @author starwang
  *
  */
 public class Node2 {
