@@ -3,13 +3,13 @@ package test9;
 
 
 /***
- * ×Ô¶¨ÒåÒ»¸öHashMapµÄµ×²ãÊµÏÖ
- * @author ÍõÃ÷ĞÇ
+ * è‡ªå®šä¹‰ä¸€ä¸ªHashMapçš„åº•å±‚å®ç°
+ * @author starwang
  *
  */
 public class myHashMap3 {
 	
-	Node2[] table;//Î»Í°Êı×é
+	Node2[] table;//ä½æ¡¶æ•°ç»„
 	int size;
 	Boolean replaceKey = false;
 	
@@ -58,19 +58,19 @@ public class myHashMap3 {
 	}
 	public void put(Object key, Object value) {
 		
-		//¶¨ÒåÒ»¸öĞÂµÄ½Úµã
+		//å®šä¹‰ä¸€ä¸ªæ–°çš„èŠ‚ç‚¹
 		Node2 newNode = new Node2();
 		newNode.setHash(myHash(key, table.length));
 		newNode.setKey(key);
 		newNode.setValue(value);
 		newNode.setNext(null);
 		
-		//ÅĞ¶ÏÊÇ·ñÎªnull,À´´æ·ÅÖµ
+		//åˆ¤æ–­æ˜¯å¦ä¸ºnull,æ¥å­˜æ”¾å€¼
 		if(table[newNode.getHash()]==null) {
-			//Ö±½Ó·ÅÖÃ¾Í¿ÉÒÔ
+			//ç›´æ¥æ”¾ç½®å°±å¯ä»¥
 			table[newNode.getHash()]=newNode;
 		}else {
-			//´´½¨Ò»¸öÁÙÊ±µÄ½Úµã
+			//åˆ›å»ºä¸€ä¸ªä¸´æ—¶çš„èŠ‚ç‚¹
 			Node2 temp = table[newNode.getHash()];
 			Node2 temp1 = temp.getNext();
 			while (temp1!=null) {
@@ -90,8 +90,8 @@ public class myHashMap3 {
 		replaceKey = false;
 	}
 	public int myHash(Object key1,int length) {
-		//Ò»°ãÓĞÁ½ÖÖµÄ·½·¨¿ÉÒÔ½øĞĞÑ¡×Å£¬
-		//Ò»ÖÖÊÇ½øĞĞÎ»ÔËËã£¬ÁíÒ»ÖÖÊÇÈ¡Óà£¬Ç°Ò»ÖÖÔËËãĞ§ÂÊ¸ß£¬ºóÒ»ÖÖÔËËãĞ§ÂÊµÍ
+		//ä¸€èˆ¬æœ‰ä¸¤ç§çš„æ–¹æ³•å¯ä»¥è¿›è¡Œé€‰ç€ï¼Œ
+		//ä¸€ç§æ˜¯è¿›è¡Œä½è¿ç®—ï¼Œå¦ä¸€ç§æ˜¯å–ä½™ï¼Œå‰ä¸€ç§è¿ç®—æ•ˆç‡é«˜ï¼Œåä¸€ç§è¿ç®—æ•ˆç‡ä½
 		return (int)key1&(length-1);
 	}
 	public static void main(String[] args) {
