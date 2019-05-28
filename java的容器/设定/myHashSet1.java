@@ -7,11 +7,11 @@ import java.util.Set;
 
 
 /***
- * HashSetµÄµ×²ãÊÇÍ¨¹ıHashMapÀ´½øĞĞÊµÏÖµÄ£¬valueÖµÊÇÒ»¸öObjectµÄ¶ÔÏó£¬
- * ÕâÒ²¾ÍÔì³ÉÁËËûÃÇÎŞ·¨ÖØ¸´ºÍÅÅĞòµÄÌØµã
- * ËûµÄ½è¿ÚÊÇ¸ù¾İCollection
+ * HashSetçš„åº•å±‚æ˜¯é€šè¿‡HashMapæ¥è¿›è¡Œå®ç°çš„ï¼Œvalueå€¼æ˜¯ä¸€ä¸ªObjectçš„å¯¹è±¡ï¼Œ
+ * è¿™ä¹Ÿå°±é€ æˆäº†ä»–ä»¬æ— æ³•é‡å¤å’Œæ’åºçš„ç‰¹ç‚¹
+ * ä»–çš„å€Ÿå£æ˜¯æ ¹æ®Collection
  * map = new HashMap<>();
- * @author ÍõÃ÷ĞÇ
+ * @author starwang
  *
  */
 public class myHashSet1 {
@@ -23,7 +23,7 @@ public class myHashSet1 {
 		se.add("fas");
 		se.add("fasd");
 		se.add("fasdf");
-		se.add("f");//ÎŞ·¨ÖØ¸´
+		se.add("f");//æ— æ³•é‡å¤
 		se.remove("fa");
 		System.out.println(se.size());
 		System.out.println(se.isEmpty());
